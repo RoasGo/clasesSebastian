@@ -17,10 +17,15 @@ public class Clase13 {
 		
 		// TAREA: INVESTIGAR UN EJERCICIO E IDENTIFICAR LOS PROCESOS PARA RESOLVERLO.
 		int[] arreglo = { 1, 3, 7, 5, 5 };
+		int[] arreglo1 = { 6, 4, 7, 5, 5 };
+		
 		int[] nuevoArreglo = sumaDeDosNumeros(arreglo);
+		int[] nuevoArreglo1 = sumaDeDosNumeros(arreglo1);
 		
 		System.out.println(nuevoArreglo[0]);
 		System.out.println(nuevoArreglo[1]);
+		System.out.println(nuevoArreglo1[0]);
+		System.out.println(nuevoArreglo1[1]);
 		
 		//TAREA: VERIFICAR QUE EL ARREGLO TENGA DATOS
 	}
