@@ -6,6 +6,7 @@ public class Clase16 {
 
 	public static void main(String[] args) {
 		
+		/*
 		Scanner scanner = new Scanner(System.in);
 		int numero = scanner.nextInt();
 		
@@ -13,7 +14,10 @@ public class Clase16 {
 			System.out.println(cuadrado_dos_numeros(numero));
 			numero = scanner.nextInt();
 		}
-		
+		*/
+		System.out.println("Por favor adivine el numero");
+		System.out.println("Ingrese un numero entero mayor a 0");
+		System.out.println(adivinar_numero(80));
 	}
 	
 	/*
@@ -56,5 +60,51 @@ public class Clase16 {
 	 * 4. Pedir números hasta que se teclee uno negativo, y mostrar cuántos números se han introducido.
 	 * 
 	 */
+	
+	/* EJERCICIO NUMERO 4:
+	 * ENTRADA: Un numero entero
+	 * PROCESO: 
+	 *	- Pedir un numero por consola, utilizando la clase Scanner.
+	 *	- Validar el numero, si es mayor o menor al parametro.
+	 *		+ Si es mayor -> Pedir que se ingrese un numero mas pequeño.
+	 *		+ Si es menor -> Pedir que se ingrese un numero mas grande.
+	 *		+ Contar las veces que se vuelva a ingresar un numero.
+	 *	- Volver a pedir un numero hasta que sea correcto.
+	 * SALIDA: String con el texto "Felicidades, acertaste el numero en 'X' intentos" 
+	 * 
+	 */
+	
+	static String adivinar_numero( int numero ) { // numero = 50
+		
+		Scanner scanner = new Scanner(System.in);
+		int numeroIngresado = scanner.nextInt(); // numeroIngresado = 25
+		int contador = 1;
+		
+		// Tenemos que utilizar algun tipo de BUCLE!!
+		do {
+			if ( numeroIngresado < numero ) {	// true
+				System.out.println("Ingrese un numero mas grande...");
+				numeroIngresado = scanner.nextInt();	// numeroIngresado = 30
+			} else {
+				System.out.println("Ingrese un numero mas pequeño...");
+				numeroIngresado = scanner.nextInt();
+			}
+			contador++;
+		} while ( numeroIngresado != numero );
+		
+		/*
+		 	while ( numeroIngresado != numero ) ) {
+	 			if ( numeroIngresado < numero ) {	// true
+					System.out.println("Ingresar un numero mas grande...");
+					numeroIngresado = scanner.nextInt();	// numeroIngresado = 30
+				} else {
+					System.out.println("Ingresar un numero mas pequeño...");
+					numeroIngresado = scanner.nextInt();
+				}
+		 	}
+		 */
+		
+		return "Felicidades, acertaste el número!" + " en " + contador + " veces :D"; 
+	}
 	
 }
