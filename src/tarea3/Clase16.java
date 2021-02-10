@@ -101,6 +101,7 @@ public class Clase16 {
 					System.out.println("Ingresar un numero mas pequeño...");
 					numeroIngresado = scanner.nextInt();
 				}
+				contador++;
 		 	}
 		 */
 		
