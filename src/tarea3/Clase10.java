@@ -8,6 +8,7 @@ public class Clase10 {
 		Persona p = new Persona();
 		p.nombre = "Jorge";
 		p.apellido = "JAVA";
+		p.hablar(0, null);
 		Persona prueba = new Persona();
 		System.out.println("El nombre de prueba es: "+prueba.nombre);
 		System.out.println("El nombre de prueba es: "+prueba.apellido);
