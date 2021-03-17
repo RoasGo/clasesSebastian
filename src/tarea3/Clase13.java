@@ -37,9 +37,9 @@ public class Clase13 {
 		// Validacion
 		
 		for( int i=0; i < arreglo.length; i++ ) { // i=0 -> 1 | i=1 -> 3
-			//System.out.println("For AFUERA: " + i + " veces");
+			System.out.println("For AFUERA: " + i + " veces");
 			for(int j=0; j<arreglo.length; j++) { // j=0 -> 1 | j=1 -> 3 | j=2 -> 5
-				//System.out.println("For adentro: " + j + " veces");
+				System.out.println("For adentro: " + j + " veces");
 				if( (arreglo[i] + arreglo[j]) == 10 ) { //  1 + 1 == 15 |  1 + 3 == 15 | 1 + 5 == 15 
 														// 3 + 1 .....
 					
