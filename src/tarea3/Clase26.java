@@ -1,6 +1,7 @@
 package tarea3;
 
 import java.util.ArrayList;
+import clases.Alumno;
 
 public class Clase26 {
 
@@ -19,22 +20,22 @@ public class Clase26 {
 	// Aprobados: nota mayor o igual a 13
 
 	public static void main(String[] args) {
-		AlumnoClase26 alumno1 = new AlumnoClase26("Gonzalo", "Roa", 20, 20, 20);
-		AlumnoClase26 alumno2 = new AlumnoClase26("Rodrigo", "Castillo", 15.4, 17.8, 18);
-		AlumnoClase26 alumno3 = new AlumnoClase26("Hector", "Montero", 19.5, 18, 17.5);
-		AlumnoClase26 alumno4 = new AlumnoClase26("Diego", "Montero", 14.5, 18, 17.5);
-		AlumnoClase26 alumno5 = new AlumnoClase26("Miriam", "Montero", 12.5, 18, 17.5);
-		AlumnoClase26 alumno6 = new AlumnoClase26("Gianella", "Montero", 18.5, 18, 17.5);
-		AlumnoClase26 alumno7 = new AlumnoClase26("Christian", "Montero", 11.5, 18, 17.5);
-		AlumnoClase26 alumno8 = new AlumnoClase26("Jorge", "Montero", 08.5, 18, 17.5);
-		AlumnoClase26 alumno9 = new AlumnoClase26("Sebastian", "Montero", 20, 18, 17.5);
-		AlumnoClase26 alumno10 = new AlumnoClase26("Patricia", "Montero", 15, 18, 17.5);
-		AlumnoClase26 alumno11 = new AlumnoClase26("Jessica", "Montero", 13, 18, 12);
-		AlumnoClase26 alumno12 = new AlumnoClase26("Julio", "Montero", 06, 10, 15);
-		AlumnoClase26 alumno13 = new AlumnoClase26("Efrain", "Montero", 14, 12, 18.5);
-		AlumnoClase26 alumno14 = new AlumnoClase26("Cinthya", "Montero", 16.5, 10, 17.5);
+		Alumno alumno1 = new Alumno(1, "Gonzalo", "Roa", 20, 20, 20);
+		Alumno alumno2 = new Alumno(2, "Rodrigo", "Castillo", 15.4, 17.8, 18);
+		Alumno alumno3 = new Alumno(3, "Hector", "Montero", 19.5, 18, 17.5);
+		Alumno alumno4 = new Alumno(4, "Diego", "Montero", 14.5, 18, 17.5);
+		Alumno alumno5 = new Alumno(5, "Miriam", "Montero", 12.5, 18, 17.5);
+		Alumno alumno6 = new Alumno(6, "Gianella", "Montero", 18.5, 18, 17.5);
+		Alumno alumno7 = new Alumno(7, "Christian", "Montero", 11.5, 18, 17.5);
+		Alumno alumno8 = new Alumno(8, "Jorge", "Montero", 08.5, 18, 17.5);
+		Alumno alumno9 = new Alumno(9, "Sebastian", "Montero", 20, 18, 17.5);
+		Alumno alumno10 = new Alumno(10, "Patricia", "Montero", 15, 18, 17.5);
+		Alumno alumno11 = new Alumno(11, "Jessica", "Montero", 13, 18, 12);
+		Alumno alumno12 = new Alumno(12, "Julio", "Montero", 06, 10, 15);
+		Alumno alumno13 = new Alumno(13, "Efrain", "Montero", 14, 12, 18.5);
+		Alumno alumno14 = new Alumno(14, "Cinthya", "Montero", 16.5, 10, 17.5);
 
-		ArrayList<AlumnoClase26> arregloAlumno = new ArrayList<AlumnoClase26>();
+		ArrayList<Alumno> arregloAlumno = new ArrayList<Alumno>();
 		arregloAlumno.add(alumno1);
 		arregloAlumno.add(alumno2);
 		arregloAlumno.add(alumno3);
@@ -50,9 +51,46 @@ public class Clase26 {
 		arregloAlumno.add(alumno13);
 		arregloAlumno.add(alumno14);
 		
+		/*Alumno alumnoEncontrado = Alumno.findByCodigo(arregloAlumno, 5);
+		if (alumnoEncontrado != null) {
+			System.out.println(alumnoEncontrado.getCodigo());
+			System.out.println(alumnoEncontrado.getNombre());
+			System.out.println(alumnoEncontrado.getApellido());
+			System.out.println(alumnoEncontrado.getNota1());
+			System.out.println(alumnoEncontrado.getNota2());
+			System.out.println(alumnoEncontrado.getNota3());			
+		}
+		System.out.println("------------------");
+		Alumno alumnoAdded = Alumno.addAlumno(arregloAlumno, "Leonel", "Messi");
+		System.out.println(alumnoAdded.getCodigo());
+		System.out.println(alumnoAdded.getNombre());
+		System.out.println(alumnoAdded.getApellido());
+		System.out.println(alumnoAdded.getNota1());
+		System.out.println(alumnoAdded.getNota2());
+		System.out.println(alumnoAdded.getNota3());			
+		/*Alumno alumnoUpdated = Alumno.updateNotasByCodigo(arregloAlumno, 5, 14);
+		if (alumnoEncontrado != null) {
+			System.out.println(alumnoUpdated.getCodigo());
+			System.out.println(alumnoUpdated.getNombre());
+			System.out.println(alumnoUpdated.getApellido());
+			System.out.println(alumnoUpdated.getNota1());
+			System.out.println(alumnoUpdated.getNota2());
+			System.out.println(alumnoUpdated.getNota3());	
+		}
+		Alumno alumnoUpdated = Alumno.updateNotasByCodigo(arregloAlumno, 5, 16, 20, 17);
+		if (alumnoEncontrado != null) {
+			System.out.println(alumnoUpdated.getCodigo());
+			System.out.println(alumnoUpdated.getNombre());
+			System.out.println(alumnoUpdated.getApellido());
+			System.out.println(alumnoUpdated.getNota1());
+			System.out.println(alumnoUpdated.getNota2());
+			System.out.println(alumnoUpdated.getNota3());			
+		}
+		
+		/*
 		int c_aprobados=0;
-		ArrayList<AlumnoClase26> arregloAlumnosAprobados = new ArrayList<AlumnoClase26>();
-		for (AlumnoClase26 a : arregloAlumno) {
+		ArrayList<Alumno> arregloAlumnosAprobados = new ArrayList<Alumno>();
+		for (Alumno a : arregloAlumno) {
 			//System.out.println(a.nombre + ": " + a.calcularPromedio());
 			//System.out.println("");
 			if( a.calcularPromedio() >= 13 ) {
@@ -60,11 +98,11 @@ public class Clase26 {
 				c_aprobados++;
 			}
 		}
-		
+		/*
 		ordenarArreglo(arregloAlumno);
 
 		for ( int i = 0; i < 3; i++ ) {
-			String nombre = arregloAlumno.get(i).nombre;
+			String nombre = arregloAlumno.get(i).getNombre();
 			double promedio = arregloAlumno.get(i).calcularPromedio();
 			switch (i) {
 			case 0: {
@@ -81,45 +119,33 @@ public class Clase26 {
 			}
 		}
 		System.out.println("--------------------------------------------------");
-		System.out.println("Los alumnos aprobados son: " + c_aprobados);
+		System.out.println("Los alumnos aprobados son: " + c_aprobados);*/
+		
+		int resultado = Alumno.deleteAlumno(arregloAlumno, 5);
+		if ( resultado == 0 ) {
+			System.out.println("El alumno no ha sido encontrado o eliminado");
+		} else {
+			System.out.println("El alumno ha sido eliminado correctamente");
+		}
+
+		for ( Alumno a : arregloAlumno ) {
+			System.out.println(a.getCodigo());
+			System.out.println(a.getNombre());
+			System.out.println("---------");
+		}
 		
 	}
 	
-	static void ordenarArreglo ( ArrayList<AlumnoClase26> arregloAlumno ) {
+	static void ordenarArreglo ( ArrayList<Alumno> arregloAlumno ) {
 		for ( int i = 0; i < arregloAlumno.size(); i++ ) {
 			for ( int j = i + 1; j < arregloAlumno.size(); j++ ) {
 				if ( arregloAlumno.get(i).calcularPromedio() < arregloAlumno.get(j).calcularPromedio() ) {
-					AlumnoClase26 temp = arregloAlumno.get(i);
+					Alumno temp = arregloAlumno.get(i);
 					arregloAlumno.set(i, arregloAlumno.get(j));
 					arregloAlumno.set(j, temp);
 				}
 			}
 		}
-	}
-
-}
-
-class AlumnoClase26 {
-	String nombre;
-	String apellido;
-	double nota1;
-	double nota2;
-	double nota3;
-
-	public AlumnoClase26(String nombre, String apellido) {
-
-	}
-
-	public AlumnoClase26(String nombre, String apellido, double nota1, double nota2, double nota3) {
-		this.nombre = nombre;
-		this.apellido = apellido;
-		this.nota1 = nota1;
-		this.nota2 = nota2;
-		this.nota3 = nota3;
-	}
-
-	double calcularPromedio() {
-		return Math.round((this.nota1 + this.nota2 + this.nota3) / 3);
 	}
 
 }

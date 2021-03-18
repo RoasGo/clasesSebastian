@@ -90,7 +90,7 @@ public class Clase21 {
 
 }
 
-class Alumno {
+class AlumnoASD {
 	int edad;
 	double altura;
 	String nombre;
